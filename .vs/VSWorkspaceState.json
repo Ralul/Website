@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\myportfolio\\content",
+    "\\myportfolio\\themes\\hugo-theme-shell",
+    "\\myportfolio\\themes\\hugo-theme-shell\\ config",
+    "\\myportfolio\\themes\\hugo-theme-shell\\ config\\default",
+    "\\myportfolio\\themes\\hugo-theme-shell\\layouts\\_default",
+    "\\Puer HTML"
   ],
-  "SelectedNode": "\\LICENSE",
+  "SelectedNode": "\\Puer HTML\\Index.html",
   "PreviewInSolutionExplorer": false
 }
