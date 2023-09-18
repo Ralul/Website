@@ -11,7 +11,13 @@ inputBox.addEventListener("keypress",function(event){
         console.log("PRESS ENTERs")
             
         //Add input string to Cachlist
-        cachelist.push(inputBox.value)
+        //cachelist.push(inputBox.value)
+
+        cachelist.push(processInput(inputBox.value))
+        console.log(cachelist[cachelist.length-1])
+
+
+
 
         //Add input to begin to clipboardHistory 
         clipboardHistory.unshift(inputBox.value)
@@ -64,6 +70,14 @@ document.onkeydown = function(event) {
 
 };
 
-   
+//Input -> Output Function
+function processInput(input){
+    return ("i have procesed this ( " + input + " ) content")
 
+}
+
+   
+//Todo 
+//-return function with loop for multiple lines
+//-clippboardhystory improfmend up up up dowon 
 
