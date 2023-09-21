@@ -11,9 +11,9 @@ inputBox.addEventListener("keypress",function(event){
         console.log("PRESS ENTERs")
             
         //Add input string to Cachlist
-        //cachelist.push(inputBox.value)
 
-        cachelist.push(processInput(inputBox.value))
+
+        cachelist.push(processInput(inputBox.value).join("<br>"))
         console.log(cachelist[cachelist.length-1])
 
 
@@ -72,7 +72,17 @@ document.onkeydown = function(event) {
 
 //Input -> Output Function
 function processInput(input){
-    return ("i have procesed this ( " + input + " ) content")
+    let output =[]
+
+    if (input=="spam"){
+        output = ["Spam, Spam, Spam, lovely Spam","Wonderful Spam, Lovely Spam","Spam, Spam, Spam, magnificent Spam,","Superlative Spam.","Spam, Spam, Spam, wonderous Spam,","Surgical Spam, splendiferous Spam.","Spam, Spam, Spam, Spaaam!"]
+    }
+    else{
+        let outputLine1 = "command '"+ input + "' not found try somtng else"
+        output[0] = outputLine1
+    }
+
+    return output
 
 }
 
