@@ -40,7 +40,7 @@ document.addEventListener('keydown', function(event) {
     if (event.ctrlKey && event.keyCode === 76) {
         event.preventDefault();  // This prevents the default behavior
         cachelist.length = 0
-        
+
         let terminalOutput = cachelist.join("<br>")
         document.getElementById("output").innerHTML = terminalOutput
 
@@ -79,14 +79,26 @@ document.onkeydown = function(event) {
 function processInput(input){
     let output =[]
 
+
+    //reddit
+
+    //github
+
+    //cv
+
+    //e-mail
+
+    //more coomands will follow some
+    //SPAM
     if (input =="spam"){
         output = ["Spam, Spam, Spam, lovely Spam","Wonderful Spam, Lovely Spam","Spam, Spam, Spam, magnificent Spam,","Superlative Spam.","Spam, Spam, Spam, wonderous Spam,","Surgical Spam, splendiferous Spam.","Spam, Spam, Spam, Spaaam!"]
     }
-    if (input =="HELP" ||input == "help"){
+    //help
+    if (input == "help"){
         output = ["list of commands"]
     }
     else{
-        let outputLine1 = "command '"+ input + "' not found, if you need help type HELP"
+        let outputLine1 = "command '"+ input + "' not found, if you need help type 'help'"
         output[0] = outputLine1
     }
 
