@@ -10,13 +10,9 @@ inputBox.addEventListener("keypress",function(event){
         //Debug Stuff
         console.log("PRESS ENTERs")
             
-        //Add input string to Cachlist
-
-
+        //Add Procesed input to Cachlist
         cachelist.push(processInput(inputBox.value).join("<br>"))
         console.log(cachelist[cachelist.length-1])
-
-
 
 
         //Add input to begin to clipboardHistory 
@@ -36,12 +32,20 @@ inputBox.addEventListener("keypress",function(event){
 
         //Index Clipboardhystory restet to zero
         index = 0
+    }
+})
+
+//CTRL + L to clear console
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.keyCode === 76) {
+        event.preventDefault();  // This prevents the default behavior
+        cachelist.length = 0
+        
+        let terminalOutput = cachelist.join("<br>")
+        document.getElementById("output").innerHTML = terminalOutput
 
     }
-    else if (event.key === "ArrowUp" || event.key === "ArrowDown"){
-        console.log("key up / down")
-    }    
-})
+});
 
 // console up and donw key
 document.onkeydown = function(event) {
@@ -67,27 +71,22 @@ document.onkeydown = function(event) {
             console.log(index)
 
         }
-
 };
 
+    
 
 //Input -> Output Function
 function processInput(input){
     let output =[]
 
-    //SPAM
-    if (input=="spam"){
+    if (input =="spam"){
         output = ["Spam, Spam, Spam, lovely Spam","Wonderful Spam, Lovely Spam","Spam, Spam, Spam, magnificent Spam,","Superlative Spam.","Spam, Spam, Spam, wonderous Spam,","Surgical Spam, splendiferous Spam.","Spam, Spam, Spam, Spaaam!"]
     }
-
-    //help
-    if (input == "help"){
-        output = "help list of commands"
+    if (input =="HELP" ||input == "help"){
+        output = ["list of commands"]
     }
-
-    //command nod found
     else{
-        let outputLine1 = "command '"+ input + "' not found, if you need help try HELP"
+        let outputLine1 = "command '"+ input + "' not found, if you need help type HELP"
         output[0] = outputLine1
     }
 
@@ -95,9 +94,7 @@ function processInput(input){
 
 }
 
+   
 //Todo 
 //-clippboardhystory improfmend up up up dowon 
-//ctrl+l clear terminal
-//
-
-
+//CTRL + L clear 
