@@ -70,15 +70,24 @@ document.onkeydown = function(event) {
 
 };
 
+
 //Input -> Output Function
 function processInput(input){
     let output =[]
 
+    //SPAM
     if (input=="spam"){
         output = ["Spam, Spam, Spam, lovely Spam","Wonderful Spam, Lovely Spam","Spam, Spam, Spam, magnificent Spam,","Superlative Spam.","Spam, Spam, Spam, wonderous Spam,","Surgical Spam, splendiferous Spam.","Spam, Spam, Spam, Spaaam!"]
     }
+
+    //help
+    if (input == "help"){
+        output = "help list of commands"
+    }
+
+    //command nod found
     else{
-        let outputLine1 = "command '"+ input + "' not found try somtng else"
+        let outputLine1 = "command '"+ input + "' not found, if you need help try HELP"
         output[0] = outputLine1
     }
 
@@ -86,8 +95,9 @@ function processInput(input){
 
 }
 
-   
 //Todo 
-//-return function with loop for multiple lines
 //-clippboardhystory improfmend up up up dowon 
+//ctrl+l clear terminal
+//
+
 
