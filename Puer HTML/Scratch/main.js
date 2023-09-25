@@ -79,6 +79,7 @@ document.onkeydown = function(event) {
 function processInput(input){
     let output =[]
 
+    //todo list for commands
 
     //reddit
 
@@ -87,6 +88,18 @@ function processInput(input){
     //cv
 
     //e-mail
+
+    //rm -rf
+
+    //cd
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+
 
     //more coomands will follow some
     //SPAM
