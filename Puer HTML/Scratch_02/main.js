@@ -3,22 +3,14 @@ const cachelist = []
 const clipboardHistory = []
 let index = 0
 
-inputBox.addEventListener("keypress",function(event){
 
-    //Realtime Dysplay
-    if (event.key != "Enter" ){
-
-        //Input to Line by Line Output
-        let terminalOutput = cachelist.join("<br>") + inputBox
-        
-
-        console.log("uwu")
-    }
-
-
+inputBox.addEventListener("keyup",function(event){
 
     //Press Enter Key
     if (event.key === "Enter" && inputBox.value != ""){
+
+        inputBox = document.getElementById("fullscreenInput");
+        
         //Debug Stuff
         console.log("PRESS ENTERs")
             
@@ -44,7 +36,14 @@ inputBox.addEventListener("keypress",function(event){
         //Index Clipboardhystory restet to zero
         index = 0
     }
+
+    //Debug Stuff
+    console.log(inputBox.value)
+    //Send input to InputField for Visualisation
+    document.getElementById("inputField").innerHTML = inputBox.value
+
 })
+
 
 //CTRL + L to clear console
 document.addEventListener('keydown', function(event) {
@@ -84,19 +83,17 @@ document.onkeydown = function(event) {
         }
 };
 
+
+
     
 
 //Input -> Output Function
 function processInput(input){
     let output =[]
 
+    console.log(input)
+
     //todo list for commands
-
-    //Spotify
-
-    //reddit
-
-    //github
 
     //cv
 
@@ -110,17 +107,23 @@ function processInput(input){
     //
     //
     //
-    //
-    //
-
-
-    //more coomands will follow some
+    if (input == "spotify"){
+        output = ["https://open.spotify.com/user/crbabhffxdha7bdjgdwqhyjsv"]
+    }
+    //github
+    else if (input == "github"){
+        output = ["https://github.com/Ralul"]
+    }
+    //reddit
+    else if (input =="reddit"){
+        output = ["https://www.reddit.com/user/Ralul_888"]
+    }
     //SPAM
-    if (input =="spam"){
+    else if (input =="spam"){
         output = ["Spam, Spam, Spam, lovely Spam","Wonderful Spam, Lovely Spam","Spam, Spam, Spam, magnificent Spam,","Superlative Spam.","Spam, Spam, Spam, wonderous Spam,","Surgical Spam, splendiferous Spam.","Spam, Spam, Spam, Spaaam!"]
     }
     //help
-    if (input == "help"){
+    else if (input == "help"){
         output = ["list of commands"]
     }
     else{
@@ -131,8 +134,3 @@ function processInput(input){
     return output
 
 }
-
-   
-//Todo 
-//-clippboardhystory improfmend up up up dowon 
-//CTRL + L clear 
