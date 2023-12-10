@@ -1,4 +1,4 @@
-let  inputBox = document.getElementById("fullscreenInput")
+let  inputBox = document.getElementById("Inputfield")
 const cachelist = []
 const clipboardHistory = []
 let index = 0
@@ -9,7 +9,7 @@ inputBox.addEventListener("keyup",function(event){
     //Press Enter Key
     if (event.key === "Enter" && inputBox.value != ""){
 
-        inputBox = document.getElementById("fullscreenInput");
+        inputBox = document.getElementById("Inputfield");
         
         //Debug Stuff
         console.log("PRESS ENTERs")
@@ -26,6 +26,7 @@ inputBox.addEventListener("keyup",function(event){
 
         //Give the TerminalOutput to HTML output
         document.getElementById("output").innerHTML = terminalOutput
+        
 
         //Debug Stuff
         console.log(cachelist.join("\n"))
@@ -36,11 +37,6 @@ inputBox.addEventListener("keyup",function(event){
         //Index Clipboardhystory restet to zero
         index = 0
     }
-
-    //Debug Stuff
-    console.log(inputBox.value)
-    //Send input to InputField for Visualisation
-    document.getElementById("inputField").innerHTML = inputBox.value
 
 })
 
