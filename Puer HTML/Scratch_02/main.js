@@ -106,6 +106,9 @@ function processInput(input){
     if (input == "spotify"){
         output = ["https://open.spotify.com/user/crbabhffxdha7bdjgdwqhyjsv"]
     }
+    else if (input == "letterboxd"){
+        output = ["https://letterboxd.com/ralul_888/"]
+    }
     //github
     else if (input == "github"){
         output = ["https://github.com/Ralul"]
