@@ -7,21 +7,14 @@
   <style>
     /* Cursor End */
     p {
-      display: block;
-      line-height: 1.3em;
-      margin: 0;
       overflow: hidden;
       white-space: nowrap;
-      margin: 0;
-      letter-spacing: 0.05em;
-      animation: typing 100.5s steps(30, end);
+      animation: typing 10s steps(100, end);
     }
     .no-animation {
       animation: typing 0 steps(30, end);
     }
-    .margin {
-      margin-left: 20px;
-    }
+
 
     @keyframes typing {
       from {
@@ -36,7 +29,6 @@
 <body>
 
   <p class="no-animation">This is a paragraph with no animation.</p>
-  <p class="margin">This is a paragraph with left margin.</p>
   <p>This is a regular animated paragraph.</p>
 
 </body>
