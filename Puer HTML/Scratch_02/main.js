@@ -25,7 +25,10 @@ inputBox.addEventListener("keyup",function(event){
         let terminalOutput = cachelist.join("<br>")
 
         //Give the TerminalOutput to HTML output
-        document.getElementById("output").innerHTML = terminalOutput
+        setTimeout(() => {
+            document.getElementById("output").innerHTML = terminalOutput
+        }, 1000);
+          
         
 
         //Debug Stuff

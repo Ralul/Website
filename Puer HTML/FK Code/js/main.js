@@ -10,9 +10,9 @@ let pwd = false;
 var commands = [];
 
 setTimeout(function() {
-  loopLines(banner, "", 80);
+  loopLines(banner, "", 1000);
   textarea.focus();
-}, 100);
+}, 1000);
 
 window.addEventListener("keyup", enterKey);
 
@@ -36,7 +36,7 @@ function enterKey(e) {
     command.innerHTML = et.repeat(w);
     if (textarea.value === password) {
       pwd = true;
-    }
+    }setTimeout
     if (pwd && e.keyCode == 13) {
       loopLines(secret, "color2 margin", 120);
       command.innerHTML = "";
@@ -80,7 +80,7 @@ function enterKey(e) {
 function commander(cmd) {
   switch (cmd.toLowerCase()) {
     case "help":
-      loopLines(help, "color2 margin", 80);
+      loopLines(help, "color2 margin", 1000);
       break;
     case "whois":
       loopLines(whois, "color2 margin", 80);
@@ -157,7 +157,7 @@ function commander(cmd) {
 }
 
 function newTab(link) {
-  setTimeout(function() {
+  (function() {
     window.open(link, "_blank");
   }, 500);
 }
